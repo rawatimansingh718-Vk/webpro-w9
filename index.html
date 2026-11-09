@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Iman Rawat's Week 9 Web Programming homework, created with HTML and published using GitHub Pages.">
-    <title>Week 9 | Web Programming - Iman Rawat</title>
+    <title>Week 9 Pro | Iman Rawat</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -18,232 +15,99 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --background: #080d1c;
-            --card: #111a30;
-            --border: #293754;
-            --text: #f8fafc;
-            --muted: #aab7cf;
-            --purple: #a78bfa;
-            --blue: #60a5fa;
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--background);
-            color: var(--text);
+            background: #080d1c;
+            color: #f8fafc;
             min-height: 100vh;
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .skip-link {
-            position: absolute;
-            top: -60px;
-            left: 20px;
-            z-index: 10;
-            padding: 10px 16px;
-            background: var(--purple);
-            color: #080d1c;
-            border-radius: 8px;
-            font-weight: 700;
-        }
-
-        .skip-link:focus {
-            top: 15px;
-        }
-
-        header {
-            padding: 75px 20px 65px;
-            text-align: center;
-            background:
-                radial-gradient(ellipse at 20% 10%, #312e8155, transparent 45%),
-                radial-gradient(ellipse at 80% 90%, #1d4ed855, transparent 45%),
-                #0b1224;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .label {
-            display: inline-block;
-            padding: 7px 16px;
-            border: 1px solid #6655a8;
-            border-radius: 30px;
-            background: #30245a;
-            color: #ddd6fe;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 22px;
-        }
-
-        header h1 {
-            font-size: clamp(2.2rem, 6vw, 4rem);
-            line-height: 1.2;
-            font-weight: 800;
-            margin-bottom: 18px;
-            background: linear-gradient(100deg, #c4b5fd, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            max-width: 650px;
-            margin: auto;
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 16px;
-            background: #0d1528;
-            border-bottom: 1px solid var(--border);
+            align-items: center;
+            padding: 25px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #cbd5e1;
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            color: var(--blue);
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 65px auto;
-            padding: 0 22px;
-        }
-
-        .section-heading {
+        .card {
+            width: 100%;
+            max-width: 650px;
+            padding: 45px 35px;
             text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .section-heading h2 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-        }
-
-        .assignment-card {
-            background: linear-gradient(145deg, #151f38, #10182b);
-            border: 1px solid var(--border);
+            background: linear-gradient(145deg, #17213a, #10172a);
+            border: 1px solid #334467;
             border-radius: 22px;
-            padding: 35px;
-            box-shadow: 0 20px 55px #00000035;
+            box-shadow: 0 20px 60px #00000055;
             position: relative;
             overflow: hidden;
         }
 
-        .assignment-card::before {
+        .card::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             height: 4px;
             width: 100%;
-            background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
         }
 
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 24px;
-        }
-
-        .week-tag {
+        .badge {
+            display: inline-block;
+            padding: 7px 16px;
+            border-radius: 30px;
             background: #30245a;
+            border: 1px solid #7961c5;
             color: #ddd6fe;
-            border: 1px solid #6655a8;
-            padding: 6px 13px;
-            border-radius: 8px;
             font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .status {
-            color: #86efac;
-            font-size: 13px;
             font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
         }
 
-        .assignment-card h3 {
-            font-size: 1.7rem;
+        h1 {
+            font-size: clamp(2rem, 6vw, 2.8rem);
             margin-bottom: 12px;
+            background: linear-gradient(100deg, #c4b5fd, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .description {
-            color: var(--muted);
+        .subtitle {
+            color: #aab7cf;
+            font-size: 15px;
+            line-height: 1.8;
             margin-bottom: 28px;
         }
 
         .details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 14px;
-            margin-bottom: 30px;
-        }
-
-        .detail-box {
-            background: #0c1427;
-            border: 1px solid var(--border);
-            border-radius: 12px;
             padding: 17px;
-        }
-
-        .detail-box span {
-            display: block;
-            color: var(--muted);
-            font-size: 12px;
-            margin-bottom: 5px;
-        }
-
-        .detail-box strong {
+            background: #0b1428;
+            border: 1px solid #293754;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            line-height: 2;
             font-size: 14px;
         }
 
-        .links-title {
-            font-size: 14px;
-            color: #cbd5e1;
-            font-weight: 700;
-            margin-bottom: 13px;
+        .details strong {
+            color: #c4b5fd;
         }
 
         .links {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
         .links a {
-            flex: 1;
-            min-width: 150px;
-            text-align: center;
             text-decoration: none;
-            padding: 13px 17px;
-            border-radius: 10px;
-            background: #263454;
-            border: 1px solid #43577e;
+            color: white;
+            background: #293957;
+            border: 1px solid #496087;
+            padding: 12px 20px;
+            border-radius: 9px;
             font-size: 13px;
             font-weight: 700;
-            transition: 0.2s ease;
+            transition: 0.2s;
         }
 
         .links a.primary {
@@ -257,64 +121,19 @@
             filter: brightness(1.2);
         }
 
-        .about {
-            margin-top: 28px;
-            padding: 25px;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            background: #10182b;
-        }
-
-        .about h3 {
-            margin-bottom: 8px;
-            font-size: 1.15rem;
-        }
-
-        .about p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
         footer {
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 13px;
-            background: #070b16;
+            margin-top: 28px;
+            color: #8291aa;
+            font-size: 12px;
         }
 
-        footer strong {
-            color: #c4b5fd;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 55px 18px;
-            }
-
-            nav {
-                gap: 18px;
-            }
-
-            main {
-                margin: 40px auto;
-            }
-
-            .assignment-card {
-                padding: 23px;
-            }
-
-            .assignment-card h3 {
-                font-size: 1.4rem;
+        @media (max-width: 480px) {
+            .card {
+                padding: 35px 20px;
             }
 
             .links {
                 flex-direction: column;
-            }
-
-            .links a {
-                width: 100%;
             }
         }
     </style>
@@ -322,95 +141,39 @@
 
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main class="card">
+        <div class="badge">WEB PROGRAMMING • WEEK 9</div>
 
-    <header>
-        <div class="label">WEB PROGRAMMING • WEEK 9</div>
-        <h1>Learning. Building. Creating.</h1>
-        <p>
-            A practical Web Programming assignment documenting my work
-            with HTML, Git, GitHub, and GitHub Pages.
+        <h1>Week 9 Pro</h1>
+
+        <p class="subtitle">
+            Creating, managing and publishing a website using
+            HTML, Git, GitHub and GitHub Pages.
         </p>
-    </header>
 
-    <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#assignment">Assignment</a>
-        <a href="#about">About</a>
-    </nav>
+        <div class="details">
+            <p><strong>Student:</strong> Iman Rawat</p>
+            <p><strong>Date:</strong> November 9, 2026</p>
+            <p><strong>Course:</strong> Web Programming</p>
+        </div>
 
-    <main id="main-content">
+        <div class="links">
+            <a class="primary"
+               href="https://github.com/rawatimansingh718-Vk/webpro-w9"
+               target="_blank" rel="noopener noreferrer">
+                Repository ↗
+            </a>
 
-        <section class="section-heading" id="home">
-            <h2>My Assignment</h2>
-            <p>Week 9 Web Programming Homework</p>
-        </section>
+            <a href="https://github.com/rawatimansingh718-Vk/webpro-w9/commits/main/"
+               target="_blank" rel="noopener noreferrer">
+                Commits ↗
+            </a>
+        </div>
 
-        <section class="assignment-card" id="assignment">
-
-            <div class="card-top">
-                <span class="week-tag">WEEK 09</span>
-                <span class="status">● Published on GitHub Pages</span>
-            </div>
-
-            <h3>Git & GitHub Pages</h3>
-
-            <p class="description">
-                This assignment demonstrates my understanding of creating
-                a GitHub repository, preparing an HTML webpage, managing
-                project files, and publishing a website using GitHub Pages.
-            </p>
-
-            <div class="details">
-                <div class="detail-box">
-                    <span>STUDENT</span>
-                    <strong>Iman Rawat</strong>
-                </div>
-
-                <div class="detail-box">
-                    <span>SUBMISSION DATE</span>
-                    <strong>November 9, 2026</strong>
-                </div>
-
-                <div class="detail-box">
-                    <span>TECHNOLOGIES</span>
-                    <strong>HTML5 • Git • GitHub</strong>
-                </div>
-            </div>
-
-            <p class="links-title">Explore My Work</p>
-
-            <div class="links">
-                <a class="primary"
-                   href="https://github.com/rawatimansingh718-Vk/webpro-w9"
-                   target="_blank" rel="noopener noreferrer">
-                    View Repository ↗
-                </a>
-
-                <a href="https://github.com/rawatimansingh718-Vk/webpro-w9/commits/main/"
-                   target="_blank" rel="noopener noreferrer">
-                    View Commits ↗
-                </a>
-            </div>
-
-        </section>
-
-        <section class="about" id="about">
-            <h3>About This Project</h3>
-            <p>
-                This webpage is part of my Web Programming coursework.
-                It represents my practical experience with basic HTML
-                structure, version control using Git, repository
-                management, and website deployment through GitHub Pages.
-            </p>
-        </section>
-
+        <footer>
+            Designed by Iman Rawat · 2026
+        </footer>
     </main>
-
-    <footer>
-        <p>Designed and developed by <strong>Iman Rawat</strong></p>
-        <p>Web Programming • 2026</p>
-    </footer>
 
 </body>
 </html>
